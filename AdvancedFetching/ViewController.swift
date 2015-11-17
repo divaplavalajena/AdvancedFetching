@@ -35,7 +35,22 @@ class ViewController: UIViewController {
         students.append(student);
     }
     
-    func search() {
+    func search(name: String) {
+        //get student with name that has characters in search request
+        /* let num = NSNumber(int: 24)
+            let predicate = NSPredicate(format: "age  > %@", num)
+        */
+        let predicate = NSPredicate(format: "name LIKE[c] '*\(name)*'")
+        //let sort = NSSortDescriptor(key: "name", ascending: true)
+        
+        let request = NSFetchRequest(entityName: "Student")
+        request.predicate = predicate
+        
+        students = try! context.executeFetchRequest(request) as! [Student]
+        
+        for student in students {
+            print("Student name: \(student.name!), Student Age \(student.age!)")
+        }
         
     }
     
@@ -78,7 +93,8 @@ class ViewController: UIViewController {
         
         let save = UIAlertAction(title: "Search", style: .Default) { (alertAction: UIAlertAction) -> Void in
             
-            self.search();
+            let textField = alert.textFields![0]
+            self.search(textField.text!);
             
         }
         

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1D308D1B847DBD00FB1298 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D308B1B847DBD00FB1298 /* Student+CoreDataProperties.swift */; };
+		0C1D308E1B847DBD00FB1298 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1D308C1B847DBD00FB1298 /* Student.swift */; };
 		0CFB89FA1B189CE000946C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFB89F91B189CE000946C4E /* AppDelegate.swift */; };
 		0CFB89FD1B189CE000946C4E /* AdvancedFetching.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CFB89FB1B189CE000946C4E /* AdvancedFetching.xcdatamodeld */; };
 		0CFB89FF1B189CE000946C4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFB89FE1B189CE000946C4E /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C1D308B1B847DBD00FB1298 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataProperties.swift"; path = "../Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0C1D308C1B847DBD00FB1298 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = ../Student.swift; sourceTree = "<group>"; };
 		0CFB89F41B189CE000946C4E /* AdvancedFetching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedFetching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFB89F81B189CE000946C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CFB89F91B189CE000946C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			children = (
 				0CFB89F91B189CE000946C4E /* AppDelegate.swift */,
 				0CFB89FE1B189CE000946C4E /* ViewController.swift */,
+				0C1D308B1B847DBD00FB1298 /* Student+CoreDataProperties.swift */,
+				0C1D308C1B847DBD00FB1298 /* Student.swift */,
 				0CFB8A001B189CE000946C4E /* Main.storyboard */,
 				0CFB8A031B189CE000946C4E /* Images.xcassets */,
 				0CFB8A051B189CE000946C4E /* LaunchScreen.xib */,
@@ -159,6 +165,8 @@
 		0CFB89EC1B189CE000946C4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Fahir Mehovic";
 				TargetAttributes = {
@@ -217,6 +225,8 @@
 			files = (
 				0CFB89FF1B189CE000946C4E /* ViewController.swift in Sources */,
 				0CFB89FA1B189CE000946C4E /* AppDelegate.swift in Sources */,
+				0C1D308D1B847DBD00FB1298 /* Student+CoreDataProperties.swift in Sources */,
+				0C1D308E1B847DBD00FB1298 /* Student.swift in Sources */,
 				0CFB89FD1B189CE000946C4E /* AdvancedFetching.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +425,7 @@
 				0CFB8A181B189CE000946C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CFB8A191B189CE000946C4E /* Build configuration list for PBXNativeTarget "AdvancedFetchingTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +434,7 @@
 				0CFB8A1B1B189CE000946C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

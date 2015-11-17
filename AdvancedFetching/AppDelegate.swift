@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let viewController = self.window!.rootViewController as! ViewController;
         
-        viewController.context = self.managedObjectContext;
+        viewController.context = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
+        viewController.context.persistentStoreCoordinator = self.persistentStoreCoordinator
+        
+        viewController.model = self.managedObjectModel
         
         return true
     }

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     var students: [Student] = [];
     var context: NSManagedObjectContext!;
+    var model: NSManagedObjectModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,21 +37,36 @@ class ViewController: UIViewController {
     }
     
     func search(name: String) {
-        //get student with name that has characters in search request
+        //using fetchRequest template so don't need either of these bits of code
+        
         /* let num = NSNumber(int: 24)
             let predicate = NSPredicate(format: "age  > %@", num)
         */
+        
+        //get student with name that has characters in search request
+        /*
         let predicate = NSPredicate(format: "name LIKE[c] '*\(name)*'")
         //let sort = NSSortDescriptor(key: "name", ascending: true)
         
         let request = NSFetchRequest(entityName: "Student")
         request.predicate = predicate
+        */
         
-        students = try! context.executeFetchRequest(request) as! [Student]
         
-        for student in students {
-            print("Student name: \(student.name!), Student Age \(student.age!)")
+        
+        let request = model.fetchRequestTemplateForName("name")!
+        
+        let async = NSAsynchronousFetchRequest(fetchRequest: request) { (result: NSAsynchronousFetchResult) -> Void in
+            self.students = result.finalResult as! [Student]
+            
+            for student in self.students {
+                print("Student name: \(student.name!), Student Age \(student.age!)")
+            }
+
+            
         }
+        
+        try! context.executeRequest(async)
         
     }
     
